@@ -1,10 +1,9 @@
-# Configure the DigitalOcean Provider
 provider "digitalocean" {
     token = "${var.do_token}"
 }
 
 resource "digitalocean_droplet" "coreos1" {
-    image = "coreos-681.0.0"
+    image = "coreos-beta"
     name = "coreos1"
     region = "fra1"
     size = "512mb"
