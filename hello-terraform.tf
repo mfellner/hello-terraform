@@ -9,10 +9,11 @@ resource "digitalocean_droplet" "coreos1" {
     region = "fra1"
     size = "512mb"
     private_networking = true
-    user_data = "${var.cloud_config}"
+    ssh_keys = ["${digitalocean_ssh_key.default.id}"]
+    user_data = "${file("${var.cloud_config}")}"
 }
 
 resource "digitalocean_ssh_key" "default" {
-    name = "Terraform Example"
-    public_key = "${var.public_key}"
+    name = "Terraform"
+    public_key = "${file("${var.public_key}")}"
 }
