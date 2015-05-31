@@ -1,5 +1,7 @@
 # Hello Terraform
 
+Basic example for CoreOS on Digital Ocean, using [Terraform](https://www.terraform.io/).
+
 #### Prerequisites
 
 Create a file `terraform.tfvars` for the following variables:
@@ -17,6 +19,8 @@ Create a file `terraform.tfvars` for the following variables:
 
     curl -w "\n" https://discovery.etcd.io/new
 
+Replace *discovery* in cloud-config.yml with the generated URL.
+
 ## Resources
 
-* [https://www.digitalocean.com/community/tutorials/how-to-set-up-a-coreos-cluster-on-digitalocean]()
+* https://www.digitalocean.com/community/tutorials/how-to-set-up-a-coreos-cluster-on-digitalocean
